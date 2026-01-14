@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<HBox spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.kori.kori.KoriController"
+      styleClass="main-container">
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <!-- Left Panel: Kori the cat (2/3 width) -->
+    <StackPane HBox.hgrow="ALWAYS" styleClass="left-panel">
+        <Label text="Kori the cat" styleClass="panel-text"/>
+    </StackPane>
+
+    <!-- Right Panel: Clock and AI Insight (1/3 width) -->
+    <VBox spacing="20.0" HBox.hgrow="NEVER" prefWidth="300">
+        <!-- Top Right: Clock -->
+        <StackPane styleClass="right-panel-top">
+            <Label text="clock" styleClass="panel-text"/>
+        </StackPane>
+
+        <!-- Bottom Right: AI Insight -->
+        <StackPane styleClass="right-panel-bottom">
+            <Label text="ai insight" styleClass="panel-text"/>
+        </StackPane>
+    </VBox>
+
+</HBox>
