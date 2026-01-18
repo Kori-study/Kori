@@ -1,32 +1,13 @@
 .main-container {
-    -fx-background-color: white;
+    -fx-background-color: #637081;
 }
 
-.left-panel {
-    -fx-background-color: white;
-    -fx-background-radius: 20;
-    -fx-border-color: black;
-    -fx-border-width: 3;
-    -fx-border-radius: 20;
-    -fx-pref-width: 600;
+.Button {
+    -fx-background-color: #536b78;
 }
 
-.right-panel-top {
-    -fx-background-color: white;
-    -fx-background-radius: 20;
-    -fx-border-color: black;
-    -fx-border-width: 3;
-    -fx-border-radius: 20;
-    -fx-pref-height: 150;
-}
-
-.right-panel-bottom {
-    -fx-background-color: white;
-    -fx-background-radius: 20;
-    -fx-border-color: black;
-    -fx-border-width: 3;
-    -fx-border-radius: 20;
-    -fx-pref-height: 150;
+.right-panel {
+    -fx-background-color: #7C98B3;
 }
 
 .panel-text {

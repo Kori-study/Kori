@@ -1,35 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.kori.kori.Clock?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<HBox spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.kori.kori.KoriController"
-      styleClass="main-container">
+<?import com.kori.kori.Kori?>
 
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
-
-    <!-- Left Panel: Kori the cat (2/3 width) -->
-    <StackPane HBox.hgrow="ALWAYS" styleClass="left-panel">
-        <Label text="Kori the cat" styleClass="panel-text"/>
-    </StackPane>
-
-    <!-- Right Panel: Clock and AI Insight (1/3 width) -->
-    <VBox spacing="20.0" HBox.hgrow="NEVER" prefWidth="300">
-        <!-- Top Right: Clock -->
-        <StackPane styleClass="right-panel-top">
-            <Label text="clock" styleClass="panel-text"/>
-        </StackPane>
-
-        <!-- Bottom Right: AI Insight -->
-        <StackPane styleClass="right-panel-bottom">
-            <Label text="ai insight" styleClass="panel-text"/>
-        </StackPane>
-    </VBox>
-
+<HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="10.0" styleClass="main-container" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kori.kori.controller.KoriController">
+   <AnchorPane prefHeight="200.0" prefWidth="200.0">
+      <children>
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#536b78" height="380.0" stroke="BLACK" strokeType="INSIDE" width="318.0" />
+          <ImageView fitHeight="384.0" fitWidth="307.0" layoutX="5.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+              <Image url="@assets/rooms/Plan-Room.png" />
+          </ImageView>
+          <Kori fx:id="kori"/>
+      </children>
+   </AnchorPane>
+    <SplitPane dividerPositions="0.2156084656084656, 0.7023809523809523" orientation="VERTICAL" prefHeight="380.0" prefWidth="263.0" styleClass="right-panel">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="158.0">
+            <Clock fx:id="clock" alignment="CENTER" layoutY="-2.0" prefHeight="87.0" prefWidth="259.0" text="14:26:23" textAlignment="CENTER" textFill="WHITE" />
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="177.0" prefWidth="201.0">
+            <ToggleButton layoutX="31.0" layoutY="127.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="60.0" text="start" />
+         <ToggleButton layoutX="170.0" layoutY="126.0" minWidth="34.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="60.0" text="pause" />
+         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#536b78" height="85.0" layoutX="30.0" layoutY="22.0" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+         <Label layoutX="97.0" layoutY="56.0" text="stopwatch" textFill="WHITE" />
+        </AnchorPane>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="158.0">
+         <children>
+            <Label contentDisplay="CENTER" layoutX="84.0" layoutY="24.0" prefHeight="60.0" prefWidth="101.0" text="Ai stuff here " textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+    </SplitPane>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
 </HBox>

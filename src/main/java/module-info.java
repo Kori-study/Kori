@@ -6,5 +6,6 @@ module com.kori.kori {
     requires org.kordamp.bootstrapfx.core;
 
     opens com.kori.kori to javafx.fxml;
+    opens com.kori.kori.controller to javafx.fxml;
     exports com.kori.kori;
 }
