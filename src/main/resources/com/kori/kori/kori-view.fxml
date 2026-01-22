@@ -13,14 +13,14 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="10.0" styleClass="main-container" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kori.kori.controller.KoriController">
+<HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="10.0" styleClass="main-container" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kori.kori.Kori">
    <AnchorPane prefHeight="200.0" prefWidth="200.0">
       <children>
          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#536b78" height="380.0" stroke="BLACK" strokeType="INSIDE" width="318.0" />
           <ImageView fitHeight="384.0" fitWidth="307.0" layoutX="5.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
               <Image url="@assets/rooms/Plan-Room.png" />
           </ImageView>
-          <Kori fx:id="kori" fitHeight="177.0" fitWidth="200.0" layoutX="59.0" layoutY="77.0" />
+          <Kori fx:id="kori" layoutX="42.0" layoutY="27.0" smooth="false" />
       </children>
    </AnchorPane>
     <SplitPane dividerPositions="0.2156084656084656, 0.7023809523809523" orientation="VERTICAL" prefHeight="380.0" prefWidth="263.0" styleClass="right-panel">
